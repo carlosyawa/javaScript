@@ -6,23 +6,25 @@ eventListener();
 //Se crea la funcion evenListener para encapsular los objetos que llevaran el metodo de eventListener
 function eventListener() {
 
-    btnCalcular.addEventListener('click', obtenerDistancia)
+    btnCalcular.addEventListener('click', obtenerViaticos)
 
 }
 
-function obtenerDistancia() {
+function obtenerViaticos() {
 
     //Se obtiene el valor de los input y se convierte el tipo de dato a number y se le asigna el valor a la variable correspondiente
-    let Tiempo = Number(document.getElementById('Tiempo').value);
-    let Metros = Number(document.getElementById('Metros').value);
+    let Hotel = Number(document.getElementById('Hotel').value);
+    let Comidas = Number(document.getElementById('Comidas').value);
+    let Dias = Number(document.getElementById('Dias').value);
 
     let resultado = 0;
+    resultado = (Hotel * Dias) + (Comidas * Dias) + (Dias * 100);
 
-    resultado = (Tiempo * Metros);
+
 
     let imprimirResultado = document.getElementById('resultado');
 
 
-    imprimirResultado.innerHTML = resultado + " Metros ";
+    imprimirResultado.innerHTML = resultado + " Pesos ";
 
 }
