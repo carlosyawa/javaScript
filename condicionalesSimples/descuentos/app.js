@@ -19,7 +19,7 @@ function descuento() {
     let resultado = document.getElementById('resultado');
 
     if (Clave == 01) {
-        resultado.innerHTML = ('El descuento es del 10%  ' + ' <br/> Nombre del producto: ' + Nombre + '<br/> Precio del producto: ' + Precio + '<br/> Precio con descuento: ' + precioDescuento01);
+        resultado.innerHTML = ('El descuento es del 10%  ' + ' <br/> Nombre del producto: ' + Nombre + '<br/> clave del producto: ' + Clave + '<br/> Precio del producto: ' + Precio + '<br/> Precio con descuento: ' + precioDescuento01);
 
     } else if (Clave == 02) {
         resultado.innerHTML = ('El descuento es del 20%  ' + ' <br/> Nombre del producto: ' + Nombre + '<br/> Precio del producto: ' + Precio + '<br/> Precio con descuento: ' + precioDescuento02);
