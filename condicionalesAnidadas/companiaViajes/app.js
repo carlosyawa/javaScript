@@ -21,12 +21,12 @@ function calcular() {
         if (personas >= 20) {
             costoTotal = (kilometros * 1.5) * personas;
             costoPersona = costoTotal / personas;
-            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' El costo por persona es de: ' + costoPersona);
+            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' <br/> El costo por persona es de: ' + costoPersona);
 
         } else {
             costoTotal = (kilometros * 1.5) * 20;
             costoPersona = costoTotal / 20;
-            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' El costo por persona es de: ' + costoPersona);
+            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' <br/> El costo por persona es de: ' + costoPersona);
 
         }
 
@@ -35,40 +35,40 @@ function calcular() {
         if (personas >= 20) {
             costoTotal = (kilometros * 2) * personas;
             costoPersona = costoTotal / personas;
-            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' El costo por persona es de: ' + costoPersona);
+            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' <br/> El costo por persona es de: ' + costoPersona);
 
         } else {
             costoTotal = (kilometros * 2) * 20;
             costoPersona = costoTotal / 20;
-            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' El costo por persona es de: ' + costoPersona);
+            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' <br/> El costo por persona es de: ' + costoPersona);
 
         }
     } else if (camion == 'c' || camion == 'C') {
         if (personas >= 20) {
             costoTotal = (kilometros * 2.5) * personas;
             costoPersona = costoTotal / personas;
-            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' El costo por persona es de: ' + costoPersona);
+            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' <br/> El costo por persona es de: ' + costoPersona);
 
         } else {
             costoTotal = (kilometros * 2.5) * 20;
             costoPersona = costoTotal / 20;
-            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' El costo por persona es de: ' + costoPersona);
+            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' <br/> El costo por persona es de: ' + costoPersona);
 
         }
     } else if (camion == 'd' || camion == 'D') {
         if (personas >= 20) {
             costoTotal = (kilometros * 3) * personas;
             costoPersona = costoTotal / personas;
-            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' El costo por persona es de: ' + costoPersona);
+            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' <br/> El costo por persona es de: ' + costoPersona);
 
         } else {
             costoTotal = (kilometros * 3) * 20;
             costoPersona = costoTotal / 20;
-            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' El costo por persona es de: ' + costoPersona);
+            imprimirResultado.innerHTML = ('El costo total es de ' + costoTotal + ' <br/> El costo por persona es de: ' + costoPersona);
 
         }
-    } else {
-        imprimirResultado.innerHTML('Este tipo de camion no existe //#endregion')
+    } else if (camion = !'a' && camion == !'A' || camion == !'b' && camion == !'B' || camion == !'c' && camion == !'C' || camion == !'d' && camion == !'D') {
+        imprimirResultado.innerHTML('Este tipo de camion no existe ')
     }
 
 }
