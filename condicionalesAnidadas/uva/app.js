@@ -8,7 +8,7 @@ function EventListener() {
 }
 
 function compararDatos() {
-    let tipoUva = Number(document.getElementById('tipoUva').value);
+    let tipoUva = document.getElementById('tipoUva').value;
     let tamanoUva = Number(document.getElementById('tamanoUva').value);
     let precioUva = Number(document.getElementById('precioUva').value);
     let imprimirResultado = document.getElementById('resultado');

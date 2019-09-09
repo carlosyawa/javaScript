@@ -6,7 +6,7 @@ function EventListener() {
 
     btnComparar.addEventListener('click', contar);
 
-    inputNumber.addEventListener('blur', calcularCifraBlur);
+    //inputNumber.addEventListener('blur', calcularCifraBlur);
 }
 
 
@@ -17,18 +17,43 @@ function contar() {
     let unidades = 0;
     let centenas = 0;
     let decenas = 0;
-    centenas = Math.floor(numero / 100);
-    decenas = Math.floor((numero % 100) / 10)
-    unidades = Math.floor((numero % 100) % 10)
+    let unidadesMillar = 0;
+    let decenasMillar = 0;
 
-    if (numero >= 0 && numero <= 9999) {
-        if (centenas == unidades) {
-            imprimirResultado.innerHTML = ('El numero ' + numero + ' es capicua');
-        } else {
-            imprimirResultado.innerHTML = ('El numero ' + numero + ' no es capicua');
-        }
+    /* centenas = Math.floor(numero / 100);
+    decenas = Math.floor((numero % 100) / 10)
+    unidades = Math.floor((numero % 100) % 10) */
+
+    unidades = numero % 10;
+    console.log(unidades)
+
+
+
+    centenas = numero % 100;
+    centenas = ((numero - (unidadesMillar * 1000)) - centenas) / 100
+    console.log(centenas);
+
+    decenas = numero % 10;
+    decenas = ((numero - (unidadesMillar * 1000) - (centenas * 100)) - decenas) / 10
+    console.log(decenas);
+
+    unidadesMillar = numero % 1000;
+    unidadesMillar = (numero - unidadesMillar) / 1000
+    console.log(unidadesMillar);
+
+
+    //decenas = numero / 10;
+    //centenas = numero / 10;
+    //unidadesMillar = numero / 10;
+
+    decenasMillar = numero;
+
+
+
+    if (unidadesMillar == unidades && centenas == decenas) {
+        imprimirResultado.innerHTML = ('El numero ' + numero + ' es capicua ');
     } else {
-        imprimirResultado.innerHTML = ('Ingresar un numero correcto');
+        imprimirResultado.innerHTML = ('El numero ' + numero + ' no es capicua ');
     }
 
 

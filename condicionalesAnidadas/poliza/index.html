@@ -15,14 +15,15 @@
 
 
     <div class="container">
-        <h1>Produccion de uva</h1>
         <div class="jumbotron">
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
-                        <label for="">Ingrese el precio de la uva</label>
-                        <input type="number" name="" id="precioUva" class="form-control" placeholder="" aria-describedby="helpId">
-
+                        <select id="poliza" class="custom-select" required>
+                          <option value="">Tipo de póliza</option>
+                          <option value="1">A</option>
+                          <option value="2">B</option>
+                         </select>
                     </div>
                 </div>
             </div>
@@ -30,9 +31,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
-                        <label for="">Ingrese el tamano de la uva</label>
-                        <input type="number" name="" id="tamanoUva" class="form-control" placeholder="" aria-describedby="helpId">
-
+                        <select id="alcohol" class="custom-select" required>
+                          <option value="">Bebe alcohol?</option>
+                          <option value="1">Si</option>
+                          <option value="2">No</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -40,11 +43,36 @@
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
-                        <label for="">Ingrese el tipo de la uva</label>
-                        <input type="text" name="" id="tipoUva" class="form-control" placeholder="" aria-describedby="helpId">
+                        <select id="lentes" class="custom-select" required>
+                          <option value="">Utiliza lentes?</option>
+                          <option value="1">Si</option>
+                          <option value="2">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <select id="enfermedad" class="custom-select" required>
+                          <option value="">Padece alguna enfermedad?</option>
+                          <option value="1">Si</option>
+                          <option value="2">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Cuantos años tiene? </label>
+                        <input type="number" name="" id="edad" class="form-control" placeholder="" aria-describedby="helpId">
 
                     </div>
                 </div>
+
             </div>
 
 
