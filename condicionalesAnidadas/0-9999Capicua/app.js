@@ -29,6 +29,10 @@ function contar() {
 
 
 
+    unidadesMillar = numero % 1000;
+    unidadesMillar = (numero - unidadesMillar) / 1000
+    console.log(unidadesMillar);
+
     centenas = numero % 100;
     centenas = ((numero - (unidadesMillar * 1000)) - centenas) / 100
     console.log(centenas);
@@ -36,10 +40,6 @@ function contar() {
     decenas = numero % 10;
     decenas = ((numero - (unidadesMillar * 1000) - (centenas * 100)) - decenas) / 10
     console.log(decenas);
-
-    unidadesMillar = numero % 1000;
-    unidadesMillar = (numero - unidadesMillar) / 1000
-    console.log(unidadesMillar);
 
 
     //decenas = numero / 10;
