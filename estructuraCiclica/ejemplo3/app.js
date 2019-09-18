@@ -1,8 +1,8 @@
 let agregar = document.getElementById('btnAgregarEst');
 let promedio = document.getElementById('btnProm');
 let numeroInput = 0;
-
-
+let a = 0;
+let b = 0;
 
 eventListener();
 
@@ -14,15 +14,25 @@ function eventListener() {
 function CalcularPromedio() {
     let suma = 0;
     let promedio = 0;
-    for (let x = 1; x <= numeroInput; x++) {
-        let estatura = Number(document.getElementById(`estatura${x}`).value);
-        suma += estatura;
+
+    if (a != b) {
+        for (let x = 0; x >= numeroInput; x++) {
+            let estatura = Number(document.getElementById(`estatura${x}`).value);
+            suma = a + 1;
+            suma = Number(suma);
+            var sumab = b + 1;
+            sumab = Number(sumab)
+        }
+    } else {
+        imprimir.innerHTML = suma
     }
+
 
     promedio = suma / numeroInput;
     let imprimir = document.getElementById('imprimir');
     imprimir.innerText = promedio;
 }
+
 
 
 function AgregarEstatura() {
